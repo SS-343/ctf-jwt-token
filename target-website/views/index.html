@@ -2,27 +2,61 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Authentication with JSON Web Tokens</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/united/bootstrap.min.css">
-    <style type="text/css">
+    <title>Cyberpunk Authentication</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+      body {
+        background-color: #0a0a0a;
+        color: #ff0033;
+        font-family: 'Courier New', Courier, monospace;
+        text-shadow: 0 0 5px #ff0033;
+      }
       .form-signin {
-        width: 100%;
-        max-width: 420px;
-        padding: 15px;
-        margin: auto;
+        background: rgba(20, 20, 20, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #ff0033;
+      }
+      input {
+        background: #111;
+        color: #ff0033;
+        border: 1px solid #ff0033;
+      }
+      input::placeholder {
+        color: #ff3366;
+      }
+      input:focus {
+        background: #222;
+        box-shadow: 0 0 5px #ff0033;
+      }
+      .btn-custom {
+        background: #ff0033;
+        border: none;
+        color: black;
+        font-weight: bold;
+      }
+      .btn-custom:hover {
+        background: #ff3366;
+        box-shadow: 0 0 5px #ff0033;
       }
     </style>
   </head>
   <body>
-    <div class="text-center"><h1> Hej! Please login with your username and password. </h1></div>
-    <form class="form-signin" action="/auth" method="POST">
-      <div class="text-center mb-4">
-        <label for="username">Username</label>
-        <input type="text" name="username" placeholder="username" class="form-control" required autofocus>
-        <label for="password">Password</label>
-        <input type="password" name="password" class="form-control" required>
-        <input type="submit" class="btn btn-success" value="login" >
+    <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+      <div class="text-center">
+        <h1> Enter the Grid</h1>
+        <form class="form-signin" action="/auth" method="POST">
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" name="username" placeholder="Enter your handle" class="form-control" required autofocus>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" required>
+          </div>
+          <button type="submit" class="btn btn-custom w-100">Login</button>
+        </form>
       </div>
-    </form>
+    </div>
   </body>
 </html>
