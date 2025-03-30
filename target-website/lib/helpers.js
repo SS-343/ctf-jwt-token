@@ -76,7 +76,7 @@ function authSuccess(req, res, role) {
 }
 
 // lookup person in "database"
-var u = { un: 'longz', pw: 'gogogo', role: 'user' };
+var u = { un: 'JohnnySilverhand', pw: 'ArasakaAug20', role: 'user' };
 
 // handle authorisation requests
 function authHandler(req, res){
